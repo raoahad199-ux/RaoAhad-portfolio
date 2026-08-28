@@ -5,6 +5,7 @@
 body {
     display: grid;
     isolation: isolate;
+    overflow-x: hidden;
     min-height: 100svh;
     margin: 0;
     padding: 2rem;
@@ -38,7 +39,7 @@ body {
 .card {
     position: relative;
     z-index: 1;
-    width: min(100%, 560px);
+    width: min(100%, 680px);
     padding: clamp(2rem, 6vw, 4rem);
     border: 1px solid #b7d5c4;
     border-radius: 12px;
@@ -348,5 +349,25 @@ dd {
 
     .contact-section {
         padding: 1rem;
+    }
+
+    .contact-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .contact-link,
+    .copy-button {
+        text-align: center;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 720px) {
+    body {
+        padding: 1.25rem;
+    }
+
+    .card {
+        padding: 2.5rem 2rem;
     }
 }
