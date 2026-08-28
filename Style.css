@@ -1,0 +1,352 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    isolation: isolate;
+    min-height: 100svh;
+    margin: 0;
+    padding: 2rem;
+    place-items: center;
+    background-image: linear-gradient(rgb(10 35 27 / 58%), rgb(10 35 27 / 58%)), url("https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=2000&q=85");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #17352b;
+    font-family: Georgia, serif;
+}
+
+.background-video,
+.video-overlay {
+    position: fixed;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+}
+
+.background-video {
+    object-fit: cover;
+}
+
+.video-overlay {
+    z-index: -1;
+    background: rgb(10 35 27 / 36%);
+}
+
+.card {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 560px);
+    padding: clamp(2rem, 6vw, 4rem);
+    border: 1px solid #b7d5c4;
+    border-radius: 12px;
+    background: rgb(255 255 255 / 84%);
+    backdrop-filter: blur(2px);
+    text-align: center;
+    box-shadow: 0 18px 45px rgb(23 53 43 / 12%);
+}
+
+.eyebrow {
+    margin: 0 0 0.75rem;
+    color: #27744f;
+    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(2.25rem, 8vw, 4rem);
+}
+
+.role {
+    margin: 0.5rem 0 0;
+    color: #27744f;
+    font-family: Arial, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+#message {
+    margin: 1rem 0 2rem;
+    color: #557267;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+#clickLink {
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    background: #27744f;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 160ms ease, transform 160ms ease;
+}
+
+#clickLink:hover,
+#clickLink:focus-visible {
+    background: #185236;
+    transform: translateY(-2px);
+    outline: 3px solid #a4d4b8;
+    outline-offset: 3px;
+}
+
+.details {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #d5e7dc;
+    animation: reveal 220ms ease-out;
+    text-align: left;
+}
+
+.details h2 {
+    margin: 0 0 1rem;
+    color: #27744f;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.section-heading {
+    margin-bottom: 1rem;
+}
+
+.section-label {
+    margin: 0 0 0.35rem;
+    color: #27744f;
+    font-family: Arial, sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.professional-section,
+.contact-section {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #d5e7dc;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-list span {
+    padding: 0.55rem 0.7rem;
+    border: 1px solid #b7d5c4;
+    border-radius: 999px;
+    color: #27744f;
+    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+}
+
+.service-item {
+    padding: 1rem;
+    border-radius: 8px;
+    background: #edf4ef;
+}
+
+.service-number {
+    color: #27744f;
+    font-family: Arial, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.service-item h3 {
+    margin: 0.65rem 0 0.4rem;
+    font-size: 1rem;
+}
+
+.service-item p,
+.contact-copy,
+.html-intro {
+    margin: 0;
+    color: #557267;
+    font-family: Arial, sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.html-tags {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+
+.html-tag-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.7rem;
+    border: 1px solid #d5e7dc;
+    border-radius: 6px;
+    background: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 0.78rem;
+}
+
+.html-tag-item code {
+    color: #27744f;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.html-tag-item span {
+    color: #557267;
+}
+
+.contact-section {
+    padding: 1.5rem;
+    border: 1px solid #b7d5c4;
+    border-radius: 8px;
+    background: #f6fbf7;
+}
+
+.contact-section h2 {
+    margin-bottom: 0.5rem;
+}
+
+.contact-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+
+.contact-link,
+.copy-button {
+    display: inline-block;
+    padding: 0.7rem 0.85rem;
+    border: 1px solid #27744f;
+    border-radius: 6px;
+    background: #27744f;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.whatsapp-link,
+.copy-button {
+    background: transparent;
+    color: #27744f;
+}
+
+.contact-link:hover,
+.contact-link:focus-visible,
+.copy-button:hover,
+.copy-button:focus-visible {
+    background: #185236;
+    color: #ffffff;
+    outline: 3px solid #a4d4b8;
+    outline-offset: 2px;
+}
+
+.copy-status {
+    min-height: 1.2em;
+    margin: 0.7rem 0 0;
+    color: #27744f;
+    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+dl {
+    margin: 0;
+}
+
+dl div {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid #edf4ef;
+    font-family: Arial, sans-serif;
+}
+
+dl div:last-child {
+    border-bottom: 0;
+}
+
+dt {
+    color: #557267;
+}
+
+dd {
+    margin: 0;
+    color: #17352b;
+    font-weight: 700;
+    text-align: right;
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 1rem;
+    }
+
+    .card {
+        padding: 2rem 1.25rem;
+    }
+
+    h1 {
+        font-size: clamp(2rem, 12vw, 3rem);
+    }
+
+    dl div {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    dd {
+        text-align: left;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .html-tags {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-section {
+        padding: 1rem;
+    }
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rao Ahad Portfolio - Full Stack Developer building modern websites and web applications.">
+    <meta name="author" content="Rao Ahad Rajput">
+    <meta name="keywords" content="Rao Ahad, Rao Ahad Rajput, Full Stack Developer, web developer portfolio">
+    <meta name="theme-color" content="#17352b">
+    <meta property="og:title" content="Rao Ahad Portfolio">
+    <meta property="og:description" content="Explore the portfolio, skills, and services of Rao Ahad Rajput, Full Stack Developer.">
+    <meta property="og:type" content="website">
+    <title>Rao Ahad Portfolio</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <video class="background-video" autoplay muted loop playsinline aria-hidden="true">
+        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay" aria-hidden="true"></div>
+
+    <main class="card">
+        <p class="eyebrow">Rao Ahad Portfolio</p>
+        <h1>Rao Ahad Rajput</h1>
+        <p class="role">Full Stack Developer</p>
+        <p id="message">Welcome to my portfolio. Click below to see my details.</p>
+        <button type="button" id="clickLink" aria-expanded="false" aria-controls="details">
+            Click Me
+        </button>
+
+        <section id="details" class="details" hidden>
+            <div class="section-heading">
+                <p class="section-label">Profile</p>
+                <h2>My Details</h2>
+            </div>
+            <dl>
+                <div>
+                    <dt>Full name</dt>
+                    <dd>Rao Ahad Rajput</dd>
+                </div>
+                <div>
+                    <dt>My name</dt>
+                    <dd>Ahad</dd>
+                </div>
+                <div>
+                    <dt>Father's name</dt>
+                    <dd>Abdul Qayyum</dd>
+                </div>
+                <div>
+                    <dt>Profession</dt>
+                    <dd>Full Stack Developer</dd>
+                </div>
+            </dl>
+
+            <section class="professional-section" aria-labelledby="skills-heading">
+                <p class="section-label">Expertise</p>
+                <h2 id="skills-heading">What I Bring</h2>
+                <div class="skill-list">
+                    <span>HTML & CSS</span>
+                    <span>JavaScript</span>
+                    <span>Responsive Design</span>
+                    <span>Full Stack Development</span>
+                </div>
+            </section>
+
+            <section class="professional-section" aria-labelledby="services-heading">
+                <p class="section-label">Services</p>
+                <h2 id="services-heading">What I Can Build</h2>
+                <div class="service-grid">
+                    <article class="service-item">
+                        <span class="service-number">01</span>
+                        <h3>Modern Websites</h3>
+                        <p>Clean, responsive websites that work smoothly on every screen.</p>
+                    </article>
+                    <article class="service-item">
+                        <span class="service-number">02</span>
+                        <h3>Web Applications</h3>
+                        <p>Useful interactive apps with simple, user-friendly experiences.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="professional-section" aria-labelledby="html-heading">
+                <p class="section-label">Learning Notes</p>
+                <h2 id="html-heading">HTML Basics</h2>
+                <p class="html-intro">HTML stands for HyperText Markup Language. It gives a webpage its structure by using elements called tags.</p>
+                <div class="html-tags" aria-label="Common HTML tags">
+                    <div class="html-tag-item">
+                        <code>&lt;h1&gt;</code>
+                        <span>Main page heading</span>
+                    </div>
+                    <div class="html-tag-item">
+                        <code>&lt;p&gt;</code>
+                        <span>Paragraph text</span>
+                    </div>
+                    <div class="html-tag-item">
+                        <code>&lt;a&gt;</code>
+                        <span>Clickable link</span>
+                    </div>
+                    <div class="html-tag-item">
+                        <code>&lt;img&gt;</code>
+                        <span>Image on a page</span>
+                    </div>
+                    <div class="html-tag-item">
+                        <code>&lt;section&gt;</code>
+                        <span>Content section</span>
+                    </div>
+                    <div class="html-tag-item">
+                        <code>&lt;button&gt;</code>
+                        <span>Interactive action</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact-section" aria-labelledby="contact-heading">
+                <div>
+                    <p class="section-label">Let's Talk</p>
+                    <h2 id="contact-heading">Start a project</h2>
+                    <p class="contact-copy">Have an idea? Contact me directly and let's discuss it.</p>
+                </div>
+                <div class="contact-actions">
+                    <a class="contact-link" href="tel:03098082013">Call 03098082013</a>
+                    <a class="contact-link whatsapp-link" href="https://wa.me/923098082013" target="_blank" rel="noopener">WhatsApp</a>
+                    <button type="button" class="copy-button" id="copyNumber">Copy number</button>
+                </div>
+                <p class="copy-status" id="copyStatus" aria-live="polite"></p>
+            </section>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
