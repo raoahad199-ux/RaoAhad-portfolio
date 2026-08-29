@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="KitabKorner | Buy, Sell & Read Books for 9th & 10th Class">
+    <meta name="description" content="Find affordable and free study books for 9th and 10th class. Buy, sell, and read books online in English and Urdu medium.">
+    <meta name="keywords" content="KitabKorner, buy books, sell books, 9th class books, 10th class books, free books, English medium books, Urdu medium books">
+    <meta property="og:title" content="KitabKorner | Buy, Sell & Read Books">
+    <meta property="og:description" content="School books, academic books, and used book marketplace for students.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kitabkorner.example.com/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=1200&q=80">
+    <link rel="canonical" href="https://kitabkorner.example.com/">
+    <title>KitabKorner | Buy & Sell Books</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="marketplace.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="#top"><span class="brand-mark">K</span><span>Kitab<span>Korner</span></span></a>
+        <nav><a class="active" href="#browse">Browse books</a><a href="#about">About</a><a href="#how-it-works">How it works</a><a href="#sell">Sell a book</a></nav>
+        <div class="header-actions"><button class="icon-button" aria-label="Saved books">♡</button><button class="profile-button">Sign in <span>→</span></button><button class="menu-button" aria-label="Open menu">☰</button></div>
+    </header>
+    <main id="top">
+        <section class="hero"><div class="hero-copy"><p class="eyebrow">A second life for every story</p><h1>Find all<br><em>subject books.</em></h1><p class="hero-text">Buy pre-loved books at lovely prices, or pass your favourites on to someone new.</p><div class="hero-search"><span>⌕</span><input id="searchInput" type="search" placeholder="Find all subject books"><button id="searchButton">Search</button></div><div class="trust-row"><span>✦ 12k+ books listed</span><span>•</span><span>Safe local exchanges</span></div></div><div class="hero-art"><div class="sun"></div><div class="book-stack"><div class="book book-back">The<br>Alchemist</div><div class="book book-middle">ATOMIC<br>HABITS</div><div class="book book-front">THE<br>CREATIVE<br>ACT<small>Rick Rubin</small></div></div><div class="art-note">Your next chapter<br><strong>starts here.</strong></div></div></section>
+            <section class="trade-section" aria-label="Buy and sell books">
+            <div class="trade-panel buy-panel">
+                <p class="eyebrow">Buy a book</p>
+                <h2>Need a book for your class?</h2>
+                <form id="buyBookForm" class="book-form">
+                    <label>
+                        Book name
+                        <input name="bookName" type="text" placeholder="Example: Physics 10th" required>
+                    </label>
+                    <div class="field-row">
+                        <label>
+                            Class
+                            <select name="className" required>
+                                <option value="">Select</option>
+                                <option>8th</option>
+                                <option>9th</option>
+                                <option>10th</option>
+                                <option>11th</option>
+                                <option>12th</option>
+                                <option>College</option>
+                            </select>
+                        </label>
+                        <label>
+                            Medium
+                            <select name="medium" required>
+                                <option value="">Select</option>
+                                <option>English</option>
+                                <option>Urdu</option>
+                            </select>
+                        </label>
+                    </div>
+                    <label>
+                        Price you want to pay (PKR)
+                        <input name="price" type="number" min="1" placeholder="1500" required>
+                    </label>
+                    <label>
+                        Payment method
+                        <select name="paymentMethod" required>
+                            <option value="">Select</option>
+                            <option>JazzCash</option>
+                            <option>Easypaisa</option>
+                            <option>Bank Transfer</option>
+                        </select>
+                    </label>
+                    <p class="tiny-note">Website fee: PKR 200 + 3% of the book price</p>
+                    <button type="submit" class="primary-button">Buy this book</button>
+                </form>
+            </div>
+            <div class="trade-panel sell-panel">
+                <p class="eyebrow">Sell a book</p>
+                <h2>List your used book to sell</h2>
+                <form id="sellBookForm" class="book-form">
+                    <label>
+                        Seller name
+                        <input name="sellerName" type="text" placeholder="Example: Ali Khan" required>
+                    </label>
+                    <label>
+                        Book title
+                        <input name="bookTitle" type="text" placeholder="Example: English Grammar" required>
+                    </label>
+                    <div class="field-row">
+                        <label>
+                            Class
+                            <select name="className" required>
+                                <option value="">Select</option>
+                                <option>8th</option>
+                                <option>9th</option>
+                                <option>10th</option>
+                                <option>11th</option>
+                                <option>12th</option>
+                                <option>College</option>
+                            </select>
+                        </label>
+                        <label>
+                            Medium
+                            <select name="medium" required>
+                                <option value="">Select</option>
+                                <option>English</option>
+                                <option>Urdu</option>
+                            </select>
+                        </label>
+                    </div>
+                    <label>
+                        Address / location
+                        <input name="sellerAddress" type="text" placeholder="Example: Lahore, Gulberg" required>
+                    </label>
+                    <label>
+                        Phone number
+                        <input name="sellerPhone" type="tel" placeholder="03xx-xxxxxxx" required>
+                    </label>
+                    <label>
+                        Selling price (PKR)
+                        <input name="price" type="number" min="1" placeholder="1200" required>
+                    </label>
+                    <button type="submit" class="primary-button">Sell this book</button>
+                </form>
+            </div>
+        </section>
+        <section class="choice-section" aria-label="Choose an action">
+                <button class="choice-card buy-choice" data-target="#browse">
+                    <span class="choice-icon">↗</span>
+                    <span><strong>Buy & Read</strong><small>Find a book, open its details and order your next read.</small></span>
+                    <b>→</b>
+                </button>
+                <button class="choice-card sell-choice" data-target="#sell">
+                    <span class="choice-icon">＋</span>
+                    <span><strong>Sell / Print</strong><small>List your book for sale or print its details for sharing.</small></span>
+                    <b>→</b>
+                </button>
+            </section>
+        <section class="browse-section" id="browse"><div class="section-heading"><div><p class="eyebrow">Curated for you</p><h2>Popular right now</h2></div><button class="text-link view-all-button" type="button">View all books <span>→</span></button></div><div class="filters"><button class="filter active" data-category="all">All books</button><button class="filter" data-category="fiction">Fiction</button><button class="filter" data-category="non-fiction">Non-fiction</button><button class="filter" data-category="academic">Academic</button><button class="filter" data-category="children">Children</button><select id="sortSelect" aria-label="Sort books"><option value="featured">Sort: Featured</option><option value="price-low">Price: Low to high</option><option value="price-high">Price: High to low</option></select></div><div class="class-filters"><button class="class-filter active" data-class="all">All classes</button><button class="class-filter" data-class="9th">9th Class</button><button class="class-filter" data-class="10th">10th Class</button></div><div class="book-grid" id="bookGrid"></div><p class="empty-state" id="emptyState">No books found. Try a different search.</p></section>
+        <section class="sell-banner" id="sell"><div><p class="eyebrow">Clear your shelf, share a story</p><h2>Turn your reads<br>into <em>someone's next.</em></h2><p>List your books in under a minute and make space for new adventures.</p></div><button class="primary-button" id="sellButton">Sell a book <span>↗</span></button></section>
+        <section class="about-section" id="about"><div class="section-heading"><div><p class="eyebrow">About us</p><h2>Why KitabKorner exists</h2></div></div><div class="about-grid"><div class="about-card"><h3>Affordable learning</h3><p>We help students and families find low-cost or free books for school and study, especially for 9th and 10th class subjects.</p></div><div class="about-card"><h3>Safe local exchange</h3><p>Buyers and sellers can connect securely, review listings, and make fair deals with clear pricing and location details.</p></div><div class="about-card"><h3>Books for every reader</h3><p>From academic textbooks to general reading, we make it easier to discover, compare, and trade books in one place.</p></div></div></section>
+        <section class="steps" id="how-it-works"><p class="eyebrow">Simple by design</p><h2>From shelf to story</h2><div class="step-grid"><article><span class="step-number">01</span><h3>Find a book</h3><p>Search thousands of titles from readers near you.</p></article><article><span class="step-number">02</span><h3>Make it yours</h3><p>Buy securely and arrange a convenient exchange.</p></article><article><span class="step-number">03</span><h3>Pass it on</h3><p>Sell your finished reads and keep the circle going.</p></article></div></section>
+    </main>
+    <footer><a class="brand" href="#top"><span class="brand-mark">K</span><span>Kitab<span>Korner</span></span></a><p>Good books deserve good company.</p><small>© 2026 KitabKorner</small></footer>
+    <dialog id="bookDialog"><div id="bookDetails"></div></dialog>
+    <dialog id="sellDialog"><form method="dialog" id="sellForm"><button class="close-button" value="cancel" aria-label="Close">×</button><p class="eyebrow">List a book</p><h2>Give your book a new home.</h2><label>Book title<input name="title" required placeholder="e.g. The Midnight Library"></label><label>Price (PKR)<input name="price" type="number" min="1" required placeholder="1200"></label><label>Condition<select name="condition"><option>Like new</option><option>Good</option><option>Well read</option></select></label><button class="primary-button" value="default">Create listing <span>↗</span></button></form></dialog>
+    <dialog id="authDialog">
+        <form id="authForm" class="auth-form">
+            <button class="close-button" value="cancel" aria-label="Close">×</button>
+            <p class="eyebrow">Welcome back</p>
+            <h2>Sign in</h2>
+            <label>Full name<input name="name" type="text" required placeholder="Your full name"></label>
+            <label>Email<input name="email" type="email" required placeholder="you@example.com"></label>
+            <label>Password<input name="password" type="password" required placeholder="••••••••"></label>
+            <div class="detail-actions auth-actions">
+                <button type="button" class="secondary-button" onclick="document.querySelector('#authDialog').close()">← Back</button>
+                <button type="submit" class="primary-button">Continue <span>→</span></button>
+            </div>
+        </form>
+    </dialog>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="marketplace.js"></script>
+</body>
+</html>
